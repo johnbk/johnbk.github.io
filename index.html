@@ -39,19 +39,19 @@
       <p class="meta post-date">24 Mar 2014</p>
       <h1 class="post-title">UntangledJS </h1>
       <div class="post">
-          <p>Not a long time ago, for me the Java Script is for the uninitiated or for people who are not supposed to be programmers. Spoiled offspring of well groomed Java. Well, that opinion has changed forever and it didn&#39;t take a long time.</p>
+          <p>Not a long time ago, for me the Java Script is for the uninitiated or for people who are not supposed to be programmers. Spoiled offspring of well groomed Java. Well, that opinion has changed forever and it didn’t take a long time.</p>
 
-<p>I belong to the Grady Booch army or the so called Java guy, the virtues of Object Orientation are forever crammed into my mind.  Whenever I hear about JavaScript all I could remember was the little hackish code I wrote to do some silly validations. And I never went back to it, never wanted to. And then there was AJAX, everyone&#39;s heartthrob, thought it was witchcraft and ignored it. Bliss.</p>
+<p>I belong to the Grady Booch army or the so called Java guy, the virtues of Object Orientation are forever crammed into my mind.  Whenever I hear about JavaScript all I could remember was the little hackish code I wrote to do some silly validations. And I never went back to it, never wanted to. And then there was AJAX, everyone’s heartthrob, thought it was witchcraft and ignored it. Bliss.</p>
 
-<p>But then something happened, few days after, all I was doing was scripting, using JavaScript, which you once considered is not even a &quot;Programming Language&quot;. <strong>Shi(F)t</strong> happens.</p>
+<p>But then something happened, few days after, all I was doing was scripting, using JavaScript, which you once considered is not even a “Programming Language”. <strong>Shi(F)t</strong> happens.</p>
 
 <blockquote>
-<p>Java is to JavaScript what Car is to Carpet.  - Chris Heilmann</p>
+  <p>Java is to JavaScript what Car is to Carpet.  - Chris Heilmann</p>
 </blockquote>
 
 <p>Sweet.</p>
 
-<p>Except for the syntax, JavaScript has nothing to do with Java. The assumed silliness of JavaScript comes from considering it otherwise. Until you ask &quot;what the heck is happening?&quot;, things look so stupid. So tangled.</p>
+<p>Except for the syntax, JavaScript has nothing to do with Java. The assumed silliness of JavaScript comes from considering it otherwise. Until you ask “what the heck is happening?”, things look so stupid. So tangled.</p>
 
 <p>Variable Scoping is one of those.</p>
 
@@ -59,7 +59,7 @@
     <span class="k">if</span><span class="p">(</span><span class="kc">true</span><span class="p">){</span>
         <span class="kd">var</span> <span class="nx">myVar</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="nx">alert</span><span class="p">(</span><span class="nx">myVar</span><span class="p">);</span> <span class="cm">/* alerts &#39;100&#39; */</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">myVar</span><span class="p">);</span> <span class="cm">/* alerts '100' */</span>
 <span class="p">}</span></code></pre></figure>
 
 <p>There is no block level scope in JavaScript, there is only a function scope. Hence the advise to declare all your variables once at the start of the function. The above piece of code is interpreted as -</p>
@@ -72,47 +72,46 @@
     <span class="nx">alert</span><span class="p">(</span><span class="nx">myVar</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>This kind of &#39;hoisting&#39; is applicable for function declarations as well.</p>
+<p>This kind of ‘hoisting’ is applicable for function declarations as well.</p>
 
-<p>Speaking of functions, Yes, there are no classes. And I would use the cliche - &#39;Function is a first class citizen in Java Script&#39;. What is meant by that is you can pass a function to another function as you would pass any other variable.</p>
+<p>Speaking of functions, Yes, there are no classes. And I would use the cliche - ‘Function is a first class citizen in Java Script’. What is meant by that is you can pass a function to another function as you would pass any other variable.</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">yourFunction</span><span class="p">()</span> <span class="p">{</span>
-   <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">);</span>
+   <span class="nx">alert</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="kd">function</span> <span class="nx">myFunction</span><span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="p">{</span>
    <span class="nx">fn</span><span class="p">();</span>
 <span class="p">}</span>
 <span class="nx">myFunction</span><span class="p">(</span><span class="nx">yourFunction</span><span class="p">);</span></code></pre></figure>
-
 <p>​</p>
 
-<p>Isn&#39;t it poweful?</p>
+<p>Isn’t it poweful?</p>
 
-<p>But what about objects? Can I &#39;encapsulate&#39; things and use? Yes you can.
+<p>But what about objects? Can I ‘encapsulate’ things and use? Yes you can.
 First, there are object literals.</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">one</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="nx">two</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="nx">three</span><span class="o">:</span> <span class="mi">3</span>
+	<span class="na">one</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+	<span class="na">two</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+	<span class="na">three</span><span class="p">:</span> <span class="mi">3</span>
 <span class="p">}</span>
 
 <span class="kd">var</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">one</span> <span class="o">:</span> <span class="mi">1</span>
-    <span class="nx">func1</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span>
+    <span class="na">one</span> <span class="p">:</span> <span class="mi">1</span>
+    <span class="na">func1</span> <span class="p">:</span> <span class="kd">function</span><span class="p">()</span>
     <span class="p">{</span>
-     <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">one</span><span class="p">);</span> <span class="c1">// Yes, &#39;this&#39; refers to THIS object.</span>
+     <span class="nx">alert</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">one</span><span class="p">);</span> <span class="c1">// Yes, 'this' refers to THIS object.</span>
     <span class="p">}</span>
 <span class="p">}</span></code></pre></figure>
 
-<p>And &quot;Wait for it&quot; you can create objects out of a function.</p>
+<p>And “Wait for it” you can create objects out of a function.</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myFunction</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">num</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">printIn</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">num</span><span class="p">);</span>
-        <span class="p">};</span>
-    <span class="p">}</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">num</span> <span class="o">=</span> <span class="nx">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">printIn</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">num</span><span class="p">);</span>
+		<span class="p">};</span>
+	<span class="p">}</span>
 
 <span class="kd">var</span> <span class="nx">myObject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">myFunction</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
 <span class="nx">myObject</span><span class="p">.</span><span class="nx">printIn</span><span class="p">();</span></code></pre></figure>
@@ -126,7 +125,7 @@ First, there are object literals.</p>
 
 <p>Or even like this -</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myOne</span> <span class="o">=</span> <span class="s2">&quot;one&quot;</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myOne</span> <span class="o">=</span> <span class="s2">"one"</span><span class="p">;</span>
 <span class="nx">obj1</span><span class="p">[</span><span class="nx">myOne</span><span class="p">]</span>  <span class="c1">// cute :)</span></code></pre></figure>
 
 <p>But wait a minute, there are no privates? is everything public?</p>
@@ -135,19 +134,19 @@ First, there are object literals.</p>
 Enter <strong>closure</strong>.</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">myFunction</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">mySecretNum</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">print</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mySecretNum</span><span class="p">);</span>
-        <span class="p">};</span>
-    <span class="p">};</span>
+		<span class="kd">var</span> <span class="nx">mySecretNum</span> <span class="o">=</span> <span class="mi">50</span><span class="p">;</span>
+		<span class="k">this</span><span class="p">.</span><span class="nx">print</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">mySecretNum</span><span class="p">);</span>
+		<span class="p">};</span>
+	<span class="p">};</span>
 
 <span class="kd">var</span> <span class="nx">myObject</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">myFunction</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
 <span class="nx">myObject</span><span class="p">.</span><span class="nx">print</span><span class="p">();</span></code></pre></figure>
 
-<p>The &#39;print&#39; function above forms a &#39;closure&#39; for &#39;mySecretNum&#39;, and it stays private.
-This feature is powerful especially with &#39;Ajax&#39;. But that topic is for some other time.</p>
+<p>The ‘print’ function above forms a ‘closure’ for ‘mySecretNum’, and it stays private.
+This feature is powerful especially with ‘Ajax’. But that topic is for some other time.</p>
 
-<p>And Oh, yeah, JavaScript is NOT strictly typed. You declare a variable and you can assigning anything to it. And if your declaration is not inside any function and if you forget to use &#39;var&#39;  in front of the variable name, that becomes a global variable. OOPS!</p>
+<p>And Oh, yeah, JavaScript is NOT strictly typed. You declare a variable and you can assigning anything to it. And if your declaration is not inside any function and if you forget to use ‘var’  in front of the variable name, that becomes a global variable. OOPS!</p>
 
 <p>It is just amazing the kind of things you can do with what you thought was a little smelly scripting language.</p>
 
@@ -155,9 +154,9 @@ This feature is powerful especially with &#39;Ajax&#39;. But that topic is for s
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">globalFunction</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
         <span class="kd">var</span> <span class="nx">myFunction</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;mine!&quot;</span><span class="p">);</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"mine!"</span><span class="p">);</span>
                 <span class="kd">var</span> <span class="nx">yourFunction</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-                        <span class="k">if</span><span class="p">(</span><span class="nx">fn</span><span class="p">())</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;yours!!!&quot;</span><span class="p">);</span>
+                        <span class="k">if</span><span class="p">(</span><span class="nx">fn</span><span class="p">())</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"yours!!!"</span><span class="p">);</span>
                     <span class="p">}</span>
 
                 <span class="nx">yourFunction</span><span class="p">();</span>
@@ -185,7 +184,7 @@ This feature is powerful especially with &#39;Ajax&#39;. But that topic is for s
 
 <p>Last few years have seen a spurt of Java Script libraries and frameworks. The days of finding work arounds for browser incompatibilities are gone, browser performance is not a problem any more. You can create cross platform mobile applications with just HTML and JavaScript, you can create desktop applications with Windows 8, heck! you can even do server side scripting. And AJAX is the thingy. HTML5 has arrived!</p>
 
-<p>Ain&#39;t it worth giving a try?</p>
+<p>Ain’t it worth giving a try?</p>
 
 <p>Go, Do it.</p>
 
